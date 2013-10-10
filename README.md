@@ -1,4 +1,4 @@
-vlqoe
+VLQoE
 =====
 The source code of the VLQoE will be available here soon! You can download the apk file, however.
 
