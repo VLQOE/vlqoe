@@ -1,5 +1,0 @@
-export ANDROID_SDK=/home/selo/android/android-sdk-linux
-export ANDROID_NDK=/home/selo/Downloads/android-ndk-r9
-export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
-export ANDROID_ABI=armeabi
-
