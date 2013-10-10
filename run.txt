@@ -1,0 +1,5 @@
+export ANDROID_SDK=../android-sdk-linux
+export ANDROID_NDK=../android-ndk-r9
+export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
+export ANDROID_ABI=armeabi
+
