@@ -4,7 +4,7 @@ This work is part of PhD thesis of Selim Ickin at the School of Computing, Bleki
 For contact, please email: selimickin@gmail.com
 web: http://www.selimickin.com
 
-Please reference the following work, when using the code.
+Please reference the following work, when using the code: 
 Selim Ickin, Markus Fiedler, Katarzyna Wac, Patrik Arlos, Canberk Temiz, Khadija Mkocha, VLQoE: Video Quality of Experience Instrumentation on the Smartphone, Multimedia Tools and Applications Journal, Special Issue on Advances in Tools, Techniques and Practices for Multimedia QoE, Springer, November 2013. 
 
 The source code of the VLQoE will be available here soon! You can download the apk file, however.
