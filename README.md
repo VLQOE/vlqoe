@@ -1,8 +1,8 @@
 VLQoE
 =====
-This work is part of PhD thesis of Selim Ickin at the School of Computing, Blekinge Institute of Technology, SWEDEN.
-For contact, please email: selimickin@gmail.com
-web: http://www.selimickin.com
+This work is part of PhD thesis of Selim Ickin at the Faculty of Computing, Department of Communication Systems, 
+Blekinge Institute of Technology, SWEDEN.
+Email: selimickin@gmail.com. Web: http://www.selimickin.com
 
 More info on the VLQoE: https://github.com/VLQOE/vlqoe/wiki/_pages
 
