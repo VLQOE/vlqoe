@@ -1,0 +1,78 @@
+This document guides you if you would like to 
+compile VLC player from scratch, and then apply
+additional VLQoE patches. 
+
+References: 
+1) https://wiki.videolan.org/AndroidCompile/
+
+Requirements:
+#Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-45-generic x86_64)
+
+# * Documentation:  https://help.ubuntu.com
+# * Management:     https://landscape.canonical.com
+# * Support:        https://ubuntu.com/advantage
+
+#  Get cloud support with Ubuntu Advantage Cloud Guest:
+#    http://www.ubuntu.com/business/services/cloud
+
+#64 packages can be updated.
+#35 updates are security updates.
+
+ubuntu@ip-172-31-46-200:~$ uname -a
+Linux ip-172-31-46-200 4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+ubuntu@ip-172-31-46-200:~$ javac -version
+javac 1.8.0_111
+
+Installation:
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install zlib1g:i386 libstdc++6:i386 libc6:i386
+
+sudo apt-get install ia32-libs
+
+sudo apt-get install automake ant autopoint cmake build-essential libtool \
+     patch pkg-config protobuf-compiler ragel subversion unzip git
+
+
+sudo wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+sudo tar -zxvf android-sdk_r24.4.1-linux.tgz
+sudo wget https://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip
+sudo unzip android-ndk-r13b-linux-x86_64.zip
+
+export ANDROID_SDK=/home/ubuntu/tmp/android-sdk-linux
+export ANDROID_NDK=/home/ubuntu/tmp/android-ndk-r13b
+export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
+
+git clone https://code.videolan.org/videolan/vlc-android.git
+
+sudo apt install python-minimal
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update; sudo apt install oracle-java8-installer
+
+cd vlc-android
+sh compile.sh 
+
+Changed files:
+/home/ubuntu/vlc-android/vlc/src/video_output/video_output.c 
+This writes the timestamp of frames to file: /sdcard/vlcplayer/vlc_frames
+
+/home/ubuntu/vlc-android/vlc/src/input/es_out.c 
+This writes the timestamp of buffering events to file: /sdcard/vlcplayer/vlc_rebuffering
+
+/home/ubuntu/vlc-android/vlc/src/input/input.c 
+This writes the video source name to file: /sdcard/vlcplayer/vlc_source
+
+/home/ubuntu/vlc-android/vlc-android/res/layout/player.xml
+Added QoE MOS and freeze buttons
+
+/home/ubuntu/vlc-android/vlc-android/src/org/videolan/vlc/gui/video/VideoPlayerActivity.java
+Measurements on the device
+
+/home/ubuntu/vlc-android/vlc-android/src/org/videolan/vlc/gui/MainActivity.java
+Additional measurements 
+
+/home/ubuntu/vlc-android/vlc-android/res/values/strings.xml 
+
+/home/ubuntu/vlc-android/vlc-android/AndroidManifest.xml
+Additional permissions set

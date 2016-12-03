@@ -1,0 +1,82 @@
+When VLQoE is first launched, /sdcard/vlcplayer directory will be created.
+All below files will be located under /sdcard/vlcplayer directory.
+For each files, the data structure of the recorded data is given.
+
+Data will be recorded in the following files during a video stream:
+vlc_application (UI events)
+	Media_Launched,1480778968.961
+	Media_Pause,1480778985.977
+	Media_Play,1480778988.270
+	backPressed,1480779008.489
+	Media_Launched,1480779012.638
+	backPressed,1480779018.988
+
+vlc_cellular (LTE cellular signal strength)
+	23,1480778926.892
+	22,1480778927.277
+	22,1480778927.278
+	23,1480778931.425
+	23,1480778931.426
+	23,1480778932.366
+	23,1480778932.368
+	24,1480778937.065
+	24,1480778937.070
+
+vlc_context (user context as entered by user before the stream)
+	sitting, home, indoor, M, 33,1480778966.509
+
+vlc_frames (each video picture is timestamped when displayed on the screen)
+	DisplayPicture//1480779015.905849
+	DisplayPicture//1480779015.947593
+	DisplayPicture//1480779015.993369
+	DisplayPicture//1480779016.030187
+	DisplayPicture//1480779016.072391
+	DisplayPicture//1480779016.113808
+	DisplayPicture//1480779016.155386
+
+vlc_freeze (freeze indication by user in the UI)
+	0,1480778979.106
+
+vlc_hardware
+	SM-G900F,samsung,armeabi-v7a,klte,qcom,kltexx,ce19d1bc,G900FXXU1POJ1,3.4.0-6364590,1480779009.501
+vlc_nettype (operator name, cellular tech, active status, timestamp)
+	Telia,13,2,1480778968.959
+	Telia,13,0,1480779012.636
+vlc_packets (RXBytes,currentTXBytes,RXPackets,TXPackets,
+			 MobileRXBytes,MobileTXBytes,MobileRXPackets,MobileTXPackets,timestamp)
+	879977782,299714127,548567,321206,0,0,0,0,1480779319.434
+	879977782,299714127,548567,321206,0,0,0,0,1480779319.724
+	879977782,299714127,548567,321206,0,0,0,0,1480779320.342
+	879977782,299714127,548567,321206,0,0,0,0,1480779320.443
+	879977870,299714127,548569,321206,0,0,0,0,1480779320.733
+	879977870,299714127,548569,321206,0,0,0,0,1480779321.354
+	879977870,299714127,548569,321206,0,0,0,0,1480779321.453
+	879977870,299714127,548569,321206,0,0,0,0,1480779321.742
+	879980656,299714127,548577,321206,0,0,0,0,1480779322.363
+	879980656,299714127,548577,321206,0,0,0,0,1480779322.462
+	879980656,299714127,548577,321206,0,0,0,0,1480779322.751
+vlc_ratings (OS, timestamp)
+	1,1480778980.522
+	2,1480778981.234
+	3,1480778981.737
+	4,1480778982.220
+	3,1480778982.864
+	4,1480778983.247
+	5,1480778983.663
+
+vlc_rebuffer (timestamp, buffering state)
+	1480779012.932146//Buffering
+	1480779012.932342//Buffering
+	1480779012.933408//Buffering
+	1480779012.960222//Buffering
+	1480779012.960482//Buffering
+	1480779012.960667//Buffering
+	1480779012.965593//BufferingCompleted
+
+vlc_source (timestamp, played video source name)
+	1480778968.439860//VfE_html5.mp4
+
+vlc_wifi (WiFi RSSI, timestamp)
+This is logged once when the app is launched. At this time the 
+device needs to be connected to a WiFi access point.
+	-42,1480779009.504
