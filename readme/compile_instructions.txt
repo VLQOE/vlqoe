@@ -18,10 +18,10 @@ Requirements:
 #64 packages can be updated.
 #35 updates are security updates.
 
-ubuntu@ip-172-31-46-200:~$ uname -a
-Linux ip-172-31-46-200 4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+ubuntu:~$ uname -a
+Linux ubuntu 4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
-ubuntu@ip-172-31-46-200:~$ javac -version
+ubuntu:~$ javac -version
 javac 1.8.0_111
 
 Installation:
