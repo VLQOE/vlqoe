@@ -2,7 +2,7 @@ VLQoE
 =====
 This work is part of PhD thesis of Selim Ickin at the Faculty of Computing, Department of Communication Systems, 
 Blekinge Institute of Technology, SWEDEN.
-Email: selimickin@gmail.com. Web: http://www.selimickin.com
+Email: selimickin@gmail.com.
 
 More info on the VLQoE: https://github.com/VLQOE/vlqoe/wiki/_pages
 
